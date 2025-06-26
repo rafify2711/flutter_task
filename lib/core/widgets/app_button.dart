@@ -8,7 +8,6 @@ class AppButton extends StatelessWidget {
   final double? width;
   final double? height;
   final Color? color;
-  final TextStyle? textStyle;
   final Widget? icon;
 
   const AppButton({
@@ -18,7 +17,6 @@ class AppButton extends StatelessWidget {
     this.width,
     this.height,
     this.color,
-    this.textStyle,
     this.icon,
   });
 
@@ -44,10 +42,10 @@ class AppButton extends StatelessWidget {
             children: [
               icon!,
               const SizedBox(width: 8),
-              Text(text, style: textStyle ?? AppStyle.button),
+              Text(text, style: AppStyle.button),
             ],
           )
-              : Text(text, style: textStyle ?? AppStyle.button),
+              : Text(text, style: AppStyle.button),
         ),
       ),
     );
